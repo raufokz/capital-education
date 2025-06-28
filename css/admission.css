@@ -1,0 +1,217 @@
+/* Admission Page Specific Styles */
+
+/* Page Header */
+.page-header {
+       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/gallery-bg.jpg');
+    background-position: center;
+    padding: 120px 0 80px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.breadcrumb {
+    justify-content: center;
+    background: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb-item.active {
+    color: var(--secondary-color);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Admission Timeline */
+.step-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    padding-top: 60px;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    border: 5px solid #fff;
+    box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+.step-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+}
+
+.step-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Application Form Section */
+.form-option-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.form-option-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.option-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+}
+
+.form-option-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Requirements Section */
+.admission-dates-table {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.note-box {
+    border-left: 4px solid var(--secondary-color);
+}
+
+.note-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Age Criteria Section */
+.age-table {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.age-table th {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+/* FAQ Section */
+.accordion-item {
+    border: none;
+    border-radius: 8px !important;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+}
+
+.accordion-button {
+    font-weight: 600;
+    padding: 15px 20px;
+    background: #fff;
+    color: var(--primary-color);
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--secondary-color);
+    color: #fff;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.accordion-body {
+    padding: 20px;
+    background: rgba(52, 152, 219, 0.05);
+}
+
+/* Online Application Modal */
+.modal-header {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .page-header {
+        padding: 80px 0 50px;
+    }
+    
+    .page-header h1 {
+        font-size: 36px;
+    }
+    
+    .step-card {
+        margin-bottom: 40px;
+    }
+    
+    .form-option-card {
+        margin-bottom: 20px;
+    }
+    
+    .table-responsive {
+        overflow-x: auto;
+    }
+}

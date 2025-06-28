@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events | Capital Education System</title>
+    <meta name="description" content="Stay updated with the latest news, events, and happenings at Capital Education System in Rawalpindi.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <style>
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .section-title {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .section-subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        
+        .bg-primary {
+            background-color: #3498db !important;
+        }
+        
+        .text-primary {
+            color: #3498db !important;
+        }
+        
+        /* Navigation */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            max-height: 60px;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+        }
+        
+        /* Page Header */
+        .page-header {
+            padding: 80px 0;
+            background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 0.8)), url('../images/header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* News Cards */
+        .news-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .news-date {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #3498db;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        
+        .news-date .day {
+            font-size: 24px;
+            font-weight: 700;
+            display: block;
+            line-height: 1;
+        }
+        
+        .news-date .month {
+            font-size: 14px;
+            display: block;
+        }
+        
+        .news-date .year {
+            font-size: 12px;
+            display: block;
+        }
+        
+        .news-meta {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+        
+        .news-meta i {
+            margin-right: 5px;
+        }
+        
+        /* Event Cards */
+        .event-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .event-date-col {
+            background: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .event-date {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .event-date .day {
+            font-size: 36px;
+            font-weight: 700;
+            display: block;
+            line-height: 1;
+        }
+        
+        .event-date .month {
+            font-size: 18px;
+            display: block;
+        }
+        
+        .event-date .year {
+            font-size: 14px;
+            display: block;
+        }
+        
+        .event-meta {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        .event-meta i {
+            margin-right: 5px;
+        }
+        
+        /* Newsletter */
+        .newsletter-section {
+            padding: 60px 0;
+        }
+        
+        /* Modal Styles */
+        .news-modal .modal-content {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .news-modal .modal-header {
+            border-bottom: none;
+            position: relative;
+        }
+        
+        .news-modal .modal-header .btn-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 1;
+            background: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            padding: 10px;
+        }
+        
+        .news-modal .modal-body {
+            padding: 30px;
+        }
+        
+        .news-modal .modal-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+        }
+        
+        .footer h5 {
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+        }
+        
+        .social-links a:hover {
+            background: #3498db;
+        }
+        
+        .school-hours span {
+            color: #bdc3c7;
+            float: right;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            display: none;
+            z-index: 99;
+        }
+        
+        .back-to-top:hover {
+            background: #2980b9;
+            color: white;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 60px 0;
+            }
+            
+            .news-date {
+                top: 10px;
+                right: 10px;
+                padding: 5px;
+            }
+            
+            .news-date .day {
+                font-size: 18px;
+            }
+            
+            .news-date .month, .news-date .year {
+                font-size: 10px;
+            }
+            
+            .event-date .day {
+                font-size: 24px;
+            }
+            
+            .event-date .month {
+                font-size: 14px;
+            }
+            
+            .event-date .year {
+                font-size: 12px;
+            }
+            
+            .news-modal .modal-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/images/logo.jpg" alt="Capital Education System Logo" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="branchesDropdown" role="button" data-bs-toggle="dropdown">
+                            Branches
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="branches/boys-campus.html">Boys Campus</a></li>
+                            <li><a class="dropdown-item" href="branches/girls-campus.html">Girls Campus</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="admissionsDropdown" role="button" data-bs-toggle="dropdown">
+                            Admissions
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="admissions/process.html">Admission Process</a></li>
+                            <li><a class="dropdown-item" href="admissions/requirements.html">Requirements</a></li>
+                            <li><a class="dropdown-item" href="admissions/fees.html">Fee Structure</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+        
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4">News & Events</h1>
+                    <p class="lead">Stay updated with the latest happenings at Capital Education System</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Latest News</h2>
+                <p class="section-subtitle">Updates from our campuses</p>
+            </div>
+            
+            <div class="row">
+                <!-- News Item 1 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card news-card h-100">
+                        <div class="news-date">
+                            <span class="day">15</span>
+                            <span class="month">Jun</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <img src="../images/news/annual-day.jpg" class="card-img-top" alt="Annual Day Celebration">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Day Celebration</h5>
+                            <p class="card-text">Our school celebrated its 28th Annual Day with great enthusiasm. Students showcased their talents through cultural performances, dances, and drama.</p>
+                            <div class="news-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Boys Campus Auditorium</span>
+                                <span><i class="fas fa-clock"></i> 10:00 AM - 2:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newsModal1">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- News Item 2 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card news-card h-100">
+                        <div class="news-date">
+                            <span class="day">05</span>
+                            <span class="month">Jun</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <img src="../images/news/science-fair.jpg" class="card-img-top" alt="Science Fair">
+                        <div class="card-body">
+                            <h5 class="card-title">Inter-School Science Fair Winners</h5>
+                            <p class="card-text">Our students won 3 gold medals at the Rawalpindi Inter-School Science Fair. Their innovative projects impressed the judges and visitors alike.</p>
+                            <div class="news-meta">
+                                <span><i class="fas fa-trophy"></i> 3 Gold Medals</span>
+                                <span><i class="fas fa-users"></i> 12 Participants</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newsModal2">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- News Item 3 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card news-card h-100">
+                        <div class="news-date">
+                            <span class="day">25</span>
+                            <span class="month">May</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <img src="../images/news/new-building.jpg" class="card-img-top" alt="New Building Inauguration">
+                        <div class="card-body">
+                            <h5 class="card-title">New Girls Campus Building Inaugurated</h5>
+                            <p class="card-text">The new wing of our Girls Campus was inaugurated by the District Education Officer. The building features modern classrooms and science labs.</p>
+                            <div class="news-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Girls Campus</span>
+                                <span><i class="fas fa-building"></i> 12 New Classrooms</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newsModal3">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- News Item 4 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card news-card h-100">
+                        <div class="news-date">
+                            <span class="day">18</span>
+                            <span class="month">May</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <img src="../images/news/book-fair.jpg" class="card-img-top" alt="Book Fair">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Book Fair</h5>
+                            <p class="card-text">Our school hosted a three-day book fair with participation from leading publishers. Students and parents enjoyed special discounts on educational books.</p>
+                            <div class="news-meta">
+                                <span><i class="fas fa-calendar"></i> 18-20 May</span>
+                                <span><i class="fas fa-book"></i> 15 Publishers</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newsModal4">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- News Item 5 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card news-card h-100">
+                        <div class="news-date">
+                            <span class="day">10</span>
+                            <span class="month">May</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <img src="../images/news/sports.jpg" class="card-img-top" alt="Sports Champions">
+                        <div class="card-body">
+                            <h5 class="card-title">District Sports Champions</h5>
+                            <p class="card-text">Our school's basketball team won the district championship for the third consecutive year. The team will now represent Rawalpindi at the provincial level.</p>
+                            <div class="news-meta">
+                                <span><i class="fas fa-trophy"></i> 1st Position</span>
+                                <span><i class="fas fa-basketball-ball"></i> Basketball</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newsModal5">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- News Item 6 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card news-card h-100">
+                        <div class="news-date">
+                            <span class="day">28</span>
+                            <span class="month">Apr</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <img src="../images/news/teacher-award.jpg" class="card-img-top" alt="Teacher Award">
+                        <div class="card-body">
+                            <h5 class="card-title">Teacher Wins National Award</h5>
+                            <p class="card-text">Mrs. Ayesha Khan, our senior science teacher, received the National Excellence in Teaching Award for her innovative teaching methodologies.</p>
+                            <div class="news-meta">
+                                <span><i class="fas fa-award"></i> National Award</span>
+                                <span><i class="fas fa-user-graduate"></i> Science Department</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newsModal6">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <nav aria-label="News pagination">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade news-modal" id="newsModal1" tabindex="-1" aria-labelledby="newsModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header p-0">
+                    <img src="../images/news/annual-day.jpg" class="modal-image" alt="Annual Day Celebration">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="news-date mb-3">
+                        <span class="day">15</span>
+                        <span class="month">Jun</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <h3 class="modal-title mb-3" id="newsModal1Label">Annual Day Celebration</h3>
+                    <div class="news-meta mb-4">
+                        <span><i class="fas fa-map-marker-alt"></i> Boys Campus Auditorium</span>
+                        <span class="ms-3"><i class="fas fa-clock"></i> 10:00 AM - 2:00 PM</span>
+                    </div>
+                    <div class="news-content">
+                        <p>Our school celebrated its 28th Annual Day with great enthusiasm and fanfare. The event was attended by students, parents, faculty members, and distinguished guests from the education sector.</p>
+                        
+                        <h5 class="mt-4">Event Highlights</h5>
+                        <ul>
+                            <li>Welcome speech by Principal Mr. Ali Raza</li>
+                            <li>Cultural performances representing all provinces of Pakistan</li>
+                            <li>Drama performance on the theme "Education for All"</li>
+                            <li>Traditional dances by students from different grades</li>
+                            <li>Prize distribution ceremony for academic excellence</li>
+                            <li>Special recognition for extracurricular achievements</li>
+                        </ul>
+                        
+                        <h5 class="mt-4">Guest of Honor</h5>
+                        <p>The event was graced by the presence of Dr. Samina Qadir, Director of Rawalpindi Education Board, who praised the school's commitment to holistic education and student development.</p>
+                        
+                        <h5 class="mt-4">Student Participation</h5>
+                        <p>Over 200 students participated in various performances, showcasing their talents in music, dance, drama, and public speaking. The event was coordinated by our cultural committee headed by Mrs. Farah Naz.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade news-modal" id="newsModal2" tabindex="-1" aria-labelledby="newsModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header p-0">
+                    <img src="../images/news/science-fair.jpg" class="modal-image" alt="Science Fair Winners">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="news-date mb-3">
+                        <span class="day">05</span>
+                        <span class="month">Jun</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <h3 class="modal-title mb-3" id="newsModal2Label">Inter-School Science Fair Winners</h3>
+                    <div class="news-meta mb-4">
+                        <span><i class="fas fa-trophy"></i> 3 Gold Medals</span>
+                        <span class="ms-3"><i class="fas fa-users"></i> 12 Participants</span>
+                    </div>
+                    <div class="news-content">
+                        <p>Our students made us proud by winning 3 gold medals at the prestigious Rawalpindi Inter-School Science Fair held at Punjab Science College. The competition featured participation from 35 schools across the region.</p>
+                        
+                        <h5 class="mt-4">Winning Projects</h5>
+                        <ul>
+                            <li><strong>Automatic Water Management System</strong> by Ahmed Khan (Grade 10) - Gold Medal</li>
+                            <li><strong>Solar-Powered Air Purifier</strong> by Fatima Ali (Grade 9) - Gold Medal</li>
+                            <li><strong>Smart Waste Segregation</strong> by team of 3 students (Grade 11) - Gold Medal</li>
+                        </ul>
+                        
+                        <h5 class="mt-4">Judges' Comments</h5>
+                        <p>The judges praised our students for their innovative approach to solving real-world problems using scientific principles. They particularly appreciated the practical applicability of the projects.</p>
+                        
+                        <h5 class="mt-4">Next Steps</h5>
+                        <p>The winning teams will now represent Rawalpindi at the National Science Exhibition to be held in Islamabad next month. Our science faculty is working with the students to further refine their projects.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade news-modal" id="newsModal3" tabindex="-1" aria-labelledby="newsModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header p-0">
+                    <img src="../images/news/new-building.jpg" class="modal-image" alt="New Building Inauguration">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="news-date mb-3">
+                        <span class="day">25</span>
+                        <span class="month">May</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <h3 class="modal-title mb-3" id="newsModal3Label">New Girls Campus Building Inaugurated</h3>
+                    <div class="news-meta mb-4">
+                        <span><i class="fas fa-map-marker-alt"></i> Girls Campus</span>
+                        <span class="ms-3"><i class="fas fa-building"></i> 12 New Classrooms</span>
+                    </div>
+                    <div class="news-content">
+                        <p>The new wing of our Girls Campus was officially inaugurated by the District Education Officer, Mrs. Naila Kausar, in a ceremony attended by faculty, students, and parents.</p>
+                        
+                        <h5 class="mt-4">Facility Highlights</h5>
+                        <ul>
+                            <li>12 modern, air-conditioned classrooms</li>
+                            <li>2 state-of-the-art science laboratories</li>
+                            <li>Computer lab with 30 workstations</li>
+                            <li>Expanded library with reading area</li>
+                            <li>Art and music rooms</li>
+                            <li>Indoor activity space</li>
+                        </ul>
+                        
+                        <h5 class="mt-4">Inauguration Ceremony</h5>
+                        <p>The ribbon-cutting ceremony was followed by a tour of the new facilities. Students presented a cultural program to mark the occasion. The DEO praised the school's commitment to providing quality infrastructure for girls' education.</p>
+                        
+                        <h5 class="mt-4">Future Plans</h5>
+                        <p>With this expansion, the Girls Campus can now accommodate 200 additional students. Admissions for the new session will begin next week.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade news-modal" id="newsModal4" tabindex="-1" aria-labelledby="newsModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header p-0">
+                    <img src="../images/news/book-fair.jpg" class="modal-image" alt="Book Fair">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="news-date mb-3">
+                        <span class="day">18</span>
+                        <span class="month">May</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <h3 class="modal-title mb-3" id="newsModal4Label">Annual Book Fair</h3>
+                    <div class="news-meta mb-4">
+                        <span><i class="fas fa-calendar"></i> 18-20 May</span>
+                        <span class="ms-3"><i class="fas fa-book"></i> 15 Publishers</span>
+                    </div>
+                    <div class="news-content">
+                        <p>Our school hosted a successful three-day book fair with participation from leading educational publishers across Pakistan. The event saw enthusiastic participation from students, parents, and teachers.</p>
+                        
+                        <h5 class="mt-4">Event Features</h5>
+                        <ul>
+                            <li>Special discounts (20-30%) on all books</li>
+                            <li>Meet-the-author sessions with renowned writers</li>
+                            <li>Reading corners with comfortable seating</li>
+                            <li>Book donation drive for underprivileged schools</li>
+                            <li>Workshops on developing reading habits</li>
+                        </ul>
+                        
+                        <h5 class="mt-4">Participating Publishers</h5>
+                        <p>The fair featured stalls from Oxford University Press, Paramount, Ferozsons, AFAQ, and other leading publishers covering textbooks, reference books, and general reading material.</p>
+                        
+                        <h5 class="mt-4">Student Involvement</h5>
+                        <p>Our student library committee managed a second-hand book exchange stall that was particularly popular. The fair concluded with a book reading competition with prizes for winners.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal fade news-modal" id="newsModal5" tabindex="-1" aria-labelledby="newsModal5Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header p-0">
+                    <img src="../images/news/sports.jpg" class="modal-image" alt="Sports Champions">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="news-date mb-3">
+                        <span class="day">10</span>
+                        <span class="month">May</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <h3 class="modal-title mb-3" id="newsModal5Label">District Sports Champions</h3>
+                    <div class="news-meta mb-4">
+                        <span><i class="fas fa-trophy"></i> 1st Position</span>
+                        <span class="ms-3"><i class="fas fa-basketball-ball"></i> Basketball</span>
+                    </div>
+                    <div class="news-content">
+                        <p>Our school's basketball team created history by winning the Rawalpindi District Championship for the third consecutive year, defeating defending champions in a thrilling final match.</p>
+                        
+                        <h5 class="mt-4">Tournament Highlights</h5>
+                        <ul>
+                            <li>Team won all 5 matches in the tournament</li>
+                            <li>Final score: 68-62 in our favor</li>
+                            <li>Captain Usman Khan named MVP of the tournament</li>
+                            <li>Coach Mr. Tariq Javed awarded Best Coach</li>
+                        </ul>
+                        
+                        <h5 class="mt-4">Key Players</h5>
+                        <p>The team's success was led by captain Usman Khan (Grade 12), point guard Ali Raza (Grade 11), and power forward Bilal Ahmed (Grade 10). Their teamwork and strategy were praised by all observers.</p>
+                        
+                        <h5 class="mt-4">Next Challenge</h5>
+                        <p>The team will now represent Rawalpindi at the Punjab Inter-District Championship next month. Special training sessions have been arranged to prepare for the bigger challenge.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="modal fade news-modal" id="newsModal6" tabindex="-1" aria-labelledby="newsModal6Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header p-0">
+                    <img src="../images/news/teacher-award.jpg" class="modal-image" alt="Teacher Award">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="news-date mb-3">
+                        <span class="day">28</span>
+                        <span class="month">Apr</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <h3 class="modal-title mb-3" id="newsModal6Label">Teacher Wins National Award</h3>
+                    <div class="news-meta mb-4">
+                        <span><i class="fas fa-award"></i> National Award</span>
+                        <span class="ms-3"><i class="fas fa-user-graduate"></i> Science Department</span>
+                    </div>
+                    <div class="news-content">
+                        <p>Mrs. Ayesha Khan, our senior science teacher with 15 years of experience, was honored with the prestigious National Excellence in Teaching Award at a ceremony in Islamabad.</p>
+                        
+                        <h5 class="mt-4">Award Criteria</h5>
+                        <p>The award recognizes teachers who demonstrate exceptional commitment to student learning, innovative teaching methods, and contributions to educational development. Mrs. Khan was selected from over 500 nominees nationwide.</p>
+                        
+                        <h5 class="mt-4">Teaching Innovations</h5>
+                        <ul>
+                            <li>Developed low-cost science experiments using everyday materials</li>
+                            <li>Pioneered the "Science in Daily Life" project-based learning approach</li>
+                            <li>Created YouTube channel with instructional videos for students</li>
+                            <li>Mentored 5 teachers who went on to win district-level awards</li>
+                        </ul>
+                        
+                        <h5 class="mt-4">School Celebration</h5>
+                        <p>The school organized a special assembly to honor Mrs. Khan's achievement. Students presented a tribute highlighting her impact on their learning journey. The principal announced a scholarship in her name for deserving science students.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Events Section -->
+    <section class="events-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Upcoming Events</h2>
+                <p class="section-subtitle">Mark your calendars for these important dates</p>
+            </div>
+            
+            <div class="row">
+                <!-- Event 1 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card event-card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4 event-date-col">
+                                <div class="event-date">
+                                    <span class="day">25</span>
+                                    <span class="month">Jun</span>
+                                    <span class="year">2023</span>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Parent-Teacher Meeting</h5>
+                                    <p class="card-text">Quarterly parent-teacher meeting to discuss student progress and academic performance.</p>
+                                    <div class="event-meta">
+                                        <span><i class="fas fa-clock"></i> 9:00 AM - 1:00 PM</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Respective Campuses</span>
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-primary mt-2">Add to Calendar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card event-card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4 event-date-col">
+                                <div class="event-date">
+                                    <span class="day">30</span>
+                                    <span class="month">Jun</span>
+                                    <span class="year">2023</span>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Summer Camp Begins</h5>
+                                    <p class="card-text">Two-week summer camp with activities including arts, sports, and educational workshops.</p>
+                                    <div class="event-meta">
+                                        <span><i class="fas fa-clock"></i> 8:00 AM - 12:00 PM</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Boys Campus Ground</span>
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-primary mt-2">Add to Calendar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card event-card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4 event-date-col">
+                                <div class="event-date">
+                                    <span class="day">05</span>
+                                    <span class="month">Jul</span>
+                                    <span class="year">2023</span>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Quran Competition</h5>
+                                    <p class="card-text">Annual Quran recitation competition for students of all grades. Categories include Hifz, Nazra, and Tarteel.</p>
+                                    <div class="event-meta">
+                                        <span><i class="fas fa-clock"></i> 10:00 AM - 2:00 PM</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Girls Campus Auditorium</span>
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-primary mt-2">Add to Calendar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 4 -->
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card event-card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4 event-date-col">
+                                <div class="event-date">
+                                    <span class="day">15</span>
+                                    <span class="month">Jul</span>
+                                    <span class="year">2023</span>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">New Session Orientation</h5>
+                                    <p class="card-text">Orientation program for new students and parents for the academic session 2023-24.</p>
+                                    <div class="event-meta">
+                                        <span><i class="fas fa-clock"></i> 9:30 AM - 12:30 PM</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Main Auditorium</span>
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-primary mt-2">Add to Calendar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary">View All Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p class="mb-0">Get the latest news and updates directly to your inbox</p>
+                </div>
+                <div class="col-lg-6">
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email address" required>
+                            <button class="btn btn-dark" type="submit">Subscribe</button>
+                        </div>
+                        <div class="form-text mt-2">We'll never share your email with anyone else.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<!-- Footer -->
+<footer class="footer bg-dark text-white pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">About Us</h5>
+                <p>Capital Education System is a premier educational institution in Qulzar e Quaid, Rawalpindi, providing quality education since 1995 through separate campuses for boys and girls.</p>
+                <div class="social-links mt-4">
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-white">About Us</a></li>
+                    <li class="mb-2"><a href="branches/boys-campus.html" class="text-white">Boys Campus</a></li>
+                    <li class="mb-2"><a href="branches/girls-campus.html" class="text-white">Girls Campus</a></li>
+                    <li class="mb-2"><a href="admissions/process.html" class="text-white">Admissions</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">Contact Info</h5>
+                <ul class="list-unstyled contact-info">
+                    <li class="mb-3">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        <span>H4WJ+VG7, St 11, Gulzar e Quaid, Rawalpindi, Punjab 44000, Pakistan</span>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-phone-alt me-2"></i>
+                        <span>+92 51 5954157</span>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-envelope me-2"></i>
+                        <span>info@capitaleducation.edu.pk</span>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-clock me-2"></i>
+                        <span>Mon-Sat: 8:00 AM - 2:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-uppercase mb-4">Newsletter</h5>
+                <p>Subscribe to our newsletter for the latest updates and news.</p>
+                <form class="newsletter-form">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-0">&copy; 2025 Capital Education System. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <p class="mb-0">Developed by <a href="http://raufokz.netlify.app/" class="text-white" target="_blank">Abdur Rauf</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Main JS -->
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+        
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body>
+</html>

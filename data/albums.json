@@ -1,0 +1,169 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "title": "Annual Prize Distribution 2023",
+      "description": "Celebrating academic excellence at our annual prize distribution ceremony",
+      "year": "2023",
+      "category": "academic",
+      "coverPhoto": "../images/gallery/annual-result-cover.jpg",
+      "photos": [
+        {
+          "id": 1,
+          "src": "../images/gallery/annual-result-1.jpg",
+          "title": "Chief Guest Arrival"
+        },
+        {
+          "id": 2,
+          "src": "../images/gallery/annual-result-2.jpg",
+          "title": "Top Scorers Receiving Awards"
+        },
+        {
+          "id": 3,
+          "src": "../images/gallery/annual-result-3.jpg",
+          "title": "Principal Addressing Students"
+        },
+        {
+          "id": 4,
+          "src": "../images/gallery/annual-result-4.jpg",
+          "title": "Special Achievement Awards"
+        },
+        {
+          "id": 5,
+          "src": "../images/gallery/prize.jpg",
+          "title": "Merit Certificate Distribution"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Sports Gala 2023",
+      "description": "Annual inter-house sports competition with exciting matches and races",
+      "year": "2023",
+      "category": "sports",
+      "coverPhoto": "../images/gallery/sports-gala.jpg",
+      "photos": [
+        {
+          "id": 1,
+          "src": "../images/gallery/sports-gala-1.jpg",
+          "title": "Opening Ceremony"
+        },
+        {
+          "id": 2,
+          "src": "../images/gallery/sports-gala-2.jpg",
+          "title": "100m Sprint Finals"
+        },
+        {
+          "id": 3,
+          "src": "../images/gallery/rel.jpg",
+          "title": "Relay Race"
+        },
+        {
+          "id": 4,
+          "src": "../images/gallery/sports-day-2.jpg",
+          "title": "Tug of War Competition"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Science Fair 2023",
+      "description": "Showcasing innovative student projects in science and technology",
+      "year": "2023",
+      "category": "academic",
+      "coverPhoto": "../images/gallery/science-fair-cover.jpg",
+      "photos": [
+        {
+          "id": 1,
+          "src": "../images/gallery/science-fair-1.jpg",
+          "title": "Robotics Project Demonstration"
+        },
+        {
+          "id": 2,
+          "src": "../images/gallery/science-fair-2.jpg",
+          "title": "Chemistry Experiments"
+        },
+        {
+          "id": 3,
+          "src": "../images/gallery/science-fair-3.jpg",
+          "title": "Physics Innovation Display"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Independence Day Celebration",
+      "description": "Patriotic performances and flag hoisting ceremony",
+      "year": "2023",
+      "category": "events",
+      "coverPhoto": "../images/gallery/independence-day-cover.jpg",
+      "photos": [
+        {
+          "id": 1,
+          "src": "../images/gallery/independence-day-1.jpg",
+          "title": "Flag Hoisting Ceremony"
+        },
+        {
+          "id": 2,
+          "src": "../images/gallery/independence-day-2.jpg",
+          "title": "National Anthem Performance"
+        },
+        {
+          "id": 3,
+          "src": "../images/gallery/independence-day-3.jpg",
+          "title": "Cultural Dance Performance"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Farewell 2023",
+      "description": "Graduation ceremony for our senior students",
+      "year": "2023",
+      "category": "events",
+      "coverPhoto": "../images/gallery/farewell.jpg",
+      "photos": [
+        {
+          "id": 1,
+          "src": "../images/gallery/farewell-1.jpg",
+          "title": "Graduation Procession"
+        },
+        {
+          "id": 2,
+          "src": "../images/gallery/farewell-2.jpg",
+          "title": "Diploma Distribution"
+        },
+        {
+          "id": 3,
+          "src": "../images/gallery/graduation-1.jpg",
+          "title": "Valedictorian Speech"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Educational Field Trip",
+      "description": "Students visit to the national museum and science center",
+      "year": "2023",
+      "category": "activities",
+      "coverPhoto": "../images/gallery/trip.jpg",
+      "photos": [
+        {
+          "id": 1,
+          "src": "../images/gallery/field-trip-1.jpg",
+          "title": "Museum Exploration"
+        },
+        {
+          "id": 2,
+          "src": "../images/gallery/field-trip-2.jpg",
+          "title": "Science Center Visit"
+        },
+        {
+          "id": 3,
+          "src": "../images/gallery/art-area.jpg",
+          "title": "Art Gallery Tour"
+        }
+      ]
+    }
+  ]
+}

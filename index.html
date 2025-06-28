@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Education System | Qulzar e Quaid Rawalpindi</title>
+    <meta name="description" content="Capital Education System provides quality education with separate campuses for boys and girls in Qulzar e Quaid, Rawalpindi.">
+    <meta name="keywords" content="school in Rawalpindi, best school in Pakistan, education, boys school, girls school, Capital Education System">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Top Bar -->
+    <!-- <div class="top-bar bg-primary text-white py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone-alt me-2"></i> +92 51 5954157</span>
+                        <span class="ms-3"><i class="fas fa-envelope me-2"></i> info@capitaleducation.edu.pk</span>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/images/logo2.png" alt="Capital Education System Logo" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="branchesDropdown" role="button" data-bs-toggle="dropdown">
+                            Branches
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="branches/boys-campus.html">Boys Campus</a></li>
+                            <li><a class="dropdown-item" href="branches/girls-campus.html">Girls Campus</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="admissionsDropdown" role="button" data-bs-toggle="dropdown">
+                            Admissions
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="admissions/process.html">Admission Process</a></li>
+                            <li><a class="dropdown-item" href="admissions/fees.html">Fee Structure</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+        
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active hero-carousel-item">
+                    <img src="images/welcome.jpg" class="d-block w-100" alt="School Building">
+                    <div class="carousel-caption">
+                        <h1 data-aos="fade-up">Quality Education for Future Leaders</h1>
+                        <p data-aos="fade-up" data-aos-delay="200">Nurturing young minds with excellence since 1995</p>
+                        <a href="admissions/process.html" class="btn btn-primary btn-lg mt-3" data-aos="fade-up" data-aos-delay="400">Apply Now</a>
+                    </div>
+                </div>
+                <div class="carousel-item hero-carousel-item">
+                    <img src="images/welcome.jpg" class="d-block w-100" alt="Students Learning">
+                    <div class="carousel-caption">
+                        <h1 data-aos="fade-up">Holistic Development Approach</h1>
+                        <p data-aos="fade-up" data-aos-delay="200">Academic excellence with character building</p>
+                        <a href="about.html" class="btn btn-primary btn-lg mt-3" data-aos="fade-up" data-aos-delay="400">Learn More</a>
+                    </div>
+                </div>
+                <div class="carousel-item  hero-carousel-item">
+                    <img src="images/welcome.jpg" class="d-block w-100" alt="School Activities">
+                    <div class="carousel-caption">
+                        <h1 data-aos="fade-up">State-of-the-Art Facilities</h1>
+                        <p data-aos="fade-up" data-aos-delay="200">Creating an optimal learning environment</p>
+                        <a href="gallery.html" class="btn btn-primary btn-lg mt-3" data-aos="fade-up" data-aos-delay="400">View Gallery</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="images/about/about.jpg" alt="About Capital Education System" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="section-title">Welcome to Capital Education System</h2>
+                    <p class="lead">A premier educational institution in Qulzar e Quaid, Rawalpindi</p>
+                    <p>Established in 1995, Capital Education System has been providing quality education with separate campuses for boys and girls. Our mission is to develop well-rounded, confident and responsible individuals who aspire to achieve their full potential.</p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span>Qualified & Experienced Faculty</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span>Modern Teaching Methodologies</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span>Focus on Character Building</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span>State-of-the-Art Facilities</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-outline-primary mt-3">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+<section class="branches-section py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Our Campuses</h2>
+            <p class="section-subtitle">Separate facilities for boys and girls with tailored learning environments</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4" data-aos="fade-right">
+                <div class="card branch-card h-100 d-flex flex-column">
+                    <img src="images/about/about.jpg" class="card-img-top" alt="Boys Campus">
+                    <div class="card-body flex-grow-1">
+                        <h3 class="card-title">Boys Campus</h3>
+                        <p class="card-text">Our boys campus provides a dynamic learning environment with specialized programs in sciences, technology, and sports.</p>
+                        <ul class="branch-features">
+                            <li><i class="fas fa-male"></i> Boys-only environment</li>
+                            <li><i class="fas fa-flask"></i> Science & Tech focus</li>
+                            <li><i class="fas fa-futbol"></i> Sports facilities</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <div class="d-grid">
+                            <a href="branches/boys-campus.html" class="btn btn-primary">Explore Campus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4" data-aos="fade-left">
+                <div class="card branch-card h-100 d-flex flex-column">
+                    <img src="images/about/about.jpg" class="card-img-top" alt="Girls Campus">
+                    <div class="card-body flex-grow-1">
+                        <h3 class="card-title">Girls Campus</h3>
+                        <p class="card-text">Our girls campus offers a nurturing environment with emphasis on academics, arts, and personal development.</p>
+                        <ul class="branch-features">
+                            <li><i class="fas fa-female"></i> Girls-only environment</li>
+                            <li><i class="fas fa-paint-brush"></i> Arts & Humanities</li>
+                            <li><i class="fas fa-lock"></i> Secure premises</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <div class="d-grid">
+                            <a href="branches/girls-campus.html" class="btn btn-primary">Explore Campus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Why Choose Capital Education?</h2>
+                <p class="section-subtitle">We provide exceptional educational experiences</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>Qualified Faculty</h3>
+                        <p>Our teachers are highly qualified with years of experience in their respective fields, committed to student success.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Modern Facilities</h3>
+                        <p>Well-equipped labs, libraries, and smart classrooms enhance the learning experience for all students.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Proven Results</h3>
+                        <p>Consistent high performance in board examinations with many distinctions and top positions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Co-curricular Activities</h3>
+                        <p>Sports, debates, arts and more to ensure holistic development of every student.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Safe Environment</h3>
+                        <p>Secure campuses with CCTV surveillance and strict safety protocols for all students.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Parental Involvement</h3>
+                        <p>Regular parent-teacher meetings and open communication channels for student progress.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">What Parents Say</h2>
+                <p class="section-subtitle">Hear from our school community</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial-card text-center p-4">
+                                    <div class="testimonial-img mx-auto mb-3">
+                                        <img src="images/testimonial/man.png" alt="Parent testimonial" class="rounded-circle">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p class="testimonial-text">"Capital Education has provided my son with an excellent learning environment. The teachers are dedicated and the academic standards are high."</p>
+                                        <h5 class="testimonial-author">Mr. Ahmed Khan</h5>
+                                        <p class="testimonial-role">Parent of Class 9 Student</p>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-card text-center p-4">
+                                    <div class="testimonial-img mx-auto mb-3">
+                                        <img src="images/testimonial/woman.png" alt="Parent testimonial" class="rounded-circle">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p class="testimonial-text">"The girls campus provides a safe and nurturing environment. My daughter has flourished academically and personally since joining."</p>
+                                        <h5 class="testimonial-author">Mrs. Fatima Ali</h5>
+                                        <p class="testimonial-role">Parent of Class 7 Student</p>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-card text-center p-4">
+                                    <div class="testimonial-img mx-auto mb-3">
+                                        <img src="images/testimonial/man.png" alt="Parent testimonial" class="rounded-circle">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p class="testimonial-text">"The balance between academics and extracurricular activities is perfect. My child looks forward to going to school every day."</p>
+                                        <h5 class="testimonial-author">Mr. Usman Malik</h5>
+                                        <p class="testimonial-role">Parent of Class 5 Student</p>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section class="news-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">News & Events</h2>
+                <p class="section-subtitle">Stay updated with our latest happenings</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card news-card h-100">
+                        <div class="news-date">
+                            <span class="day">15</span>
+                            <span class="month">Jun</span>
+                        </div>
+                        <img src="images/gallery/sports-gala-2.jpg" class="card-img-top" alt="School Event">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Sports Day</h5>
+                            <p class="card-text">Join us for our exciting annual sports event featuring competitions, races, and fun activities for all students.</p>
+                        </div>
+                    
+                                 <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <div class="d-grid">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card news-card h-100">
+                        <div class="news-date">
+                            <span class="day">22</span>
+                            <span class="month">Jun</span>
+                        </div>
+                        <img src="images/gallery/science-fair-cover.jpg" class="card-img-top" alt="School Event">
+                        <div class="card-body">
+                            <h5 class="card-title">Science Exhibition</h5>
+                            <p class="card-text">Students showcase their innovative science projects in our annual exhibition open to parents and community.</p>
+                        </div>
+                 <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <div class="d-grid">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card news-card h-100">
+                        <div class="news-date">
+                            <span class="day">30</span>
+                            <span class="month">Jun</span>
+                        </div>
+                        <img src="images/gallery/annual-result-4.jpg" class="card-img-top" alt="School Event">
+                        <div class="card-body">
+                            <h5 class="card-title">Admissions Open</h5>
+                            <p class="card-text">New session admissions are now open. Visit our campuses or website for more information and to apply.</p>
+                        </div>
+                 <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <div class="d-grid">
+                            <a href="admissions/process.html" class="btn btn-sm btn-outline-primary">Apply Now</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4" data-aos="fade-up">
+                <a href="news.html" class="btn btn-primary">View All News</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5 text-white text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="zoom-in">
+                    <h2 class="mb-4">Ready to Join Our Educational Community?</h2>
+                    <p class="lead mb-5">We're excited to welcome new students to our Capital Education family. Begin your journey with us today.</p>
+                    <div class="cta-buttons">
+                        <a href="admissions/process.html" class="btn btn-light btn-lg mx-2 mb-2">Apply Now</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg mx-2 mb-2">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">About Us</h5>
+                <p>Capital Education System is a premier educational institution in Qulzar e Quaid, Rawalpindi, providing quality education since 1995 through separate campuses for boys and girls.</p>
+                <div class="social-links mt-4">
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-white">About Us</a></li>
+                    <li class="mb-2"><a href="branches/boys-campus.html" class="text-white">Boys Campus</a></li>
+                    <li class="mb-2"><a href="branches/girls-campus.html" class="text-white">Girls Campus</a></li>
+                    <li class="mb-2"><a href="admissions/process.html" class="text-white">Admissions</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">Contact Info</h5>
+                <ul class="list-unstyled contact-info">
+                    <li class="mb-3">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        <span>H4WJ+VG7, St 11, Gulzar e Quaid, Rawalpindi, Punjab 44000, Pakistan</span>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-phone-alt me-2"></i>
+                        <span>+92 51 5954157</span>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-envelope me-2"></i>
+                        <span>info@capitaleducation.edu.pk</span>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-clock me-2"></i>
+                        <span>Mon-Sat: 8:00 AM - 2:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-uppercase mb-4">Newsletter</h5>
+                <p>Subscribe to our newsletter for the latest updates and news.</p>
+                <form class="newsletter-form">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-0">&copy; 2025 Capital Education System. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <p class="mb-0">Developed by <a href="http://raufokz.netlify.app/" class="text-white" target="_blank">Abdur Rauf</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* Branch Page Specific Styles */
+
+/* Page Header */
+.page-header {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/gallery-bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 80px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.breadcrumb {
+    justify-content: center;
+    background: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb-item.active {
+    color: var(--secondary-color);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Campus Overview */
+.campus-overview {
+    padding: 80px 0;
+}
+
+.features-list {
+    margin: 30px 0;
+}
+
+.feature-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.feature-item i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Facilities Section */
+.facility-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.facility-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.facility-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.facility-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.facility-card:hover .facility-img img {
+    transform: scale(1.1);
+}
+
+.facility-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Academics Section */
+.program-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.program-header {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.program-header h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.program-body {
+    padding: 20px;
+}
+
+.program-body ul {
+    padding-left: 20px;
+}
+
+.program-body ul li {
+    margin-bottom: 8px;
+}
+
+/* Activities Section */
+.activity-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.activity-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+}
+
+.activity-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .page-header {
+        padding: 80px 0 50px;
+    }
+    
+    .page-header h1 {
+        font-size: 36px;
+    }
+    
+    .facility-card {
+        margin-bottom: 20px;
+    }
+    
+    .program-card {
+        margin-bottom: 20px;
+    }
+}

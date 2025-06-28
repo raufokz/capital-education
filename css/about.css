@@ -1,0 +1,318 @@
+/* About Page Specific Styles */
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/gallery-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 80px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.breadcrumb {
+    justify-content: center;
+    background: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb-item.active {
+    color: var(--secondary-color);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* About Intro */
+.about-intro {
+    padding: 80px 0;
+}
+
+.achievement-counts {
+    margin-top: 30px;
+}
+
+.count-box {
+    text-align: center;
+    padding: 15px;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 8px;
+    height: 100%;
+}
+
+.count-box .count {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    display: block;
+    line-height: 1;
+}
+
+.count-box p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Core Values */
+.core-value-card {
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.core-value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--secondary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 10px;
+}
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12px;
+    background-color: #fff;
+    border: 4px solid var(--secondary-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid rgba(52, 152, 219, 0.2);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgba(52, 152, 219, 0.2);
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid rgba(52, 152, 219, 0.2);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(52, 152, 219, 0.2) transparent transparent;
+}
+
+.right::after {
+    left: -12px;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: rgba(52, 152, 219, 0.1);
+    position: relative;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.right .timeline-content {
+    border-left: none;
+    border-right: 4px solid var(--secondary-color);
+}
+
+.timeline-content h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Leadership Team */
+.team-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.team-card:hover .team-img img {
+    transform: scale(1.1);
+}
+
+.social-links {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover .social-links {
+    bottom: 20px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-info h4 {
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.team-info p {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Responsive Timeline */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-container::before {
+        left: 60px;
+        border: medium solid rgba(52, 152, 219, 0.2);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent rgba(52, 152, 219, 0.2) transparent transparent;
+    }
+    
+    .left::after, .right::after {
+        left: 19px;
+    }
+    
+    .right {
+        left: 0%;
+    }
+    
+    .timeline-content {
+        border-left: 4px solid var(--secondary-color);
+        border-right: none;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .page-header {
+        padding: 80px 0 50px;
+    }
+    
+    .page-header h1 {
+        font-size: 36px;
+    }
+    
+    .count-box {
+        margin-bottom: 15px;
+    }
+    
+    .team-img img {
+        height: 250px;
+    }
+}
