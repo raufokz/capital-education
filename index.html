@@ -34,9 +34,12 @@
 </head>
 <body>
     <!-- Preloader -->
-    <div id="preloader">
+<div id="preloader">
+    <div class="preloader-content">
+        <img src="./images/logo1.png" alt="Capital Education System Logo" class="preloader-logo">
         <div class="spinner"></div>
     </div>
+</div>
 
     <!-- Top Bar -->
     <!-- <div class="top-bar bg-primary text-white py-2">
@@ -383,76 +386,173 @@
             </div>
         </div>
     </section>
-
-    <!-- News & Events Section -->
-    <section class="news-section py-5 bg-light">
-        <div class="container">
-            <div class="section-header text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">News & Events</h2>
-                <p class="section-subtitle">Stay updated with our latest happenings</p>
+<!-- News & Events Section -->
+<section class="news-section py-5 bg-light">
+    <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">News & Events</h2>
+            <p class="section-subtitle">Stay updated with our latest happenings</p>
+        </div>
+        <div class="row">
+            <!-- News Item 1 -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card news-card h-100">
+                    <div class="news-date">
+                        <span class="day">15</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <img src="images/gallery/sports-gala-2.jpg" class="card-img-top" alt="School Event">
+                    <div class="card-body">
+                        <h5 class="card-title">Annual Sports Day</h5>
+                        <p class="card-text">Join us for our exciting annual sports event featuring competitions, races, and fun activities for all students.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <div class="d-grid">
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#sportsDayModal">Read More</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card news-card h-100">
-                        <div class="news-date">
-                            <span class="day">15</span>
-                            <span class="month">Jun</span>
-                        </div>
-                        <img src="images/gallery/sports-gala-2.jpg" class="card-img-top" alt="School Event">
-                        <div class="card-body">
-                            <h5 class="card-title">Annual Sports Day</h5>
-                            <p class="card-text">Join us for our exciting annual sports event featuring competitions, races, and fun activities for all students.</p>
-                        </div>
-                    
-                                 <div class="card-footer bg-transparent border-0 pt-0 pb-3">
-                        <div class="d-grid">
-                            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
-                        </div>
+            
+            <!-- News Item 2 -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card news-card h-100">
+                    <div class="news-date">
+                        <span class="day">22</span>
+                        <span class="month">Jun</span>
                     </div>
+                    <img src="images/gallery/science-fair-cover.jpg" class="card-img-top" alt="School Event">
+                    <div class="card-body">
+                        <h5 class="card-title">Science Exhibition</h5>
+                        <p class="card-text">Students showcase their innovative science projects in our annual exhibition open to parents and community.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                        <div class="d-grid">
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#scienceExpoModal">Read More</button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card news-card h-100">
-                        <div class="news-date">
-                            <span class="day">22</span>
-                            <span class="month">Jun</span>
-                        </div>
-                        <img src="images/gallery/science-fair-cover.jpg" class="card-img-top" alt="School Event">
-                        <div class="card-body">
-                            <h5 class="card-title">Science Exhibition</h5>
-                            <p class="card-text">Students showcase their innovative science projects in our annual exhibition open to parents and community.</p>
-                        </div>
-                 <div class="card-footer bg-transparent border-0 pt-0 pb-3">
-                        <div class="d-grid">
-                            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
-                        </div>
+            </div>
+            
+            <!-- News Item 3 -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card news-card h-100">
+                    <div class="news-date">
+                        <span class="day">30</span>
+                        <span class="month">Jun</span>
                     </div>
+                    <img src="images/gallery/annual-result-4.jpg" class="card-img-top" alt="School Event">
+                    <div class="card-body">
+                        <h5 class="card-title">Admissions Open</h5>
+                        <p class="card-text">New session admissions are now open. Visit our campuses or website for more information and to apply.</p>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card news-card h-100">
-                        <div class="news-date">
-                            <span class="day">30</span>
-                            <span class="month">Jun</span>
-                        </div>
-                        <img src="images/gallery/annual-result-4.jpg" class="card-img-top" alt="School Event">
-                        <div class="card-body">
-                            <h5 class="card-title">Admissions Open</h5>
-                            <p class="card-text">New session admissions are now open. Visit our campuses or website for more information and to apply.</p>
-                        </div>
-                 <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                    <div class="card-footer bg-transparent border-0 pt-0 pb-3">
                         <div class="d-grid">
                             <a href="admissions/process.html" class="btn btn-sm btn-outline-primary">Apply Now</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4" data-aos="fade-up">
+            <a href="news.html" class="btn btn-primary">View All News</a>
+        </div>
+    </div>
+</section>
+
+<!-- Sports Day Modal -->
+<div class="modal fade" id="sportsDayModal" tabindex="-1" aria-labelledby="sportsDayModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sportsDayModalLabel">Annual Sports Day Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="images/gallery/sports-gala-2.jpg" class="img-fluid rounded mb-3" alt="Sports Day">
+                        <div class="event-meta mb-4">
+                            <p><i class="fas fa-calendar-alt me-2"></i> <strong>Date:</strong> June 15, 2023</p>
+                            <p><i class="fas fa-clock me-2"></i> <strong>Time:</strong> 8:00 AM - 2:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt me-2"></i> <strong>Location:</strong> School Ground</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Event Highlights</h5>
+                        <ul>
+                            <li>Opening ceremony with parade</li>
+                            <li>Track and field competitions</li>
+                            <li>Team sports tournaments</li>
+                            <li>Fun races for all age groups</li>
+                            <li>Closing ceremony with prize distribution</li>
+                        </ul>
+                        <h5 class="mt-4">Participation</h5>
+                        <p>All students from Grade 1 to 12 are encouraged to participate. Parents are welcome to attend and cheer for their children.</p>
+                        <h5 class="mt-4">What to Bring</h5>
+                        <ul>
+                            <li>School sports uniform</li>
+                            <li>Water bottle</li>
+                            <li>Sun protection (hat, sunscreen)</li>
+                            <li>Extra clothes if needed</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4" data-aos="fade-up">
-                <a href="news.html" class="btn btn-primary">View All News</a>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add to Calendar</button>
             </div>
         </div>
-    </section>
+    </div>
+</div>
+
+<!-- Science Expo Modal -->
+<div class="modal fade" id="scienceExpoModal" tabindex="-1" aria-labelledby="scienceExpoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="scienceExpoModalLabel">Science Exhibition Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="images/gallery/science-fair-cover.jpg" class="img-fluid rounded mb-3" alt="Science Exhibition">
+                        <div class="event-meta mb-4">
+                            <p><i class="fas fa-calendar-alt me-2"></i> <strong>Date:</strong> June 22, 2023</p>
+                            <p><i class="fas fa-clock me-2"></i> <strong>Time:</strong> 9:00 AM - 3:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt me-2"></i> <strong>Location:</strong> School Auditorium</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Exhibition Categories</h5>
+                        <ul>
+                            <li>Physics and Engineering</li>
+                            <li>Chemistry and Materials</li>
+                            <li>Biology and Environmental Science</li>
+                            <li>Computer Science and Robotics</li>
+                            <li>Mathematics and Data Science</li>
+                        </ul>
+                        <h5 class="mt-4">Special Features</h5>
+                        <p>This year's exhibition will include interactive demonstrations, live experiments, and guest judges from local universities.</p>
+                        <h5 class="mt-4">For Visitors</h5>
+                        <ul>
+                            <li>Open to parents and community members</li>
+                            <li>Guided tours available</li>
+                            <li>Voting for People's Choice Award</li>
+                            <li>Refreshments will be served</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add to Calendar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Call to Action -->
     <section class="cta-section py-5 text-white text-center">

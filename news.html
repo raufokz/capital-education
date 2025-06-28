@@ -87,7 +87,7 @@
         /* Page Header */
         .page-header {
             padding: 80px 0;
-            background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 0.8)), url('../images/header-bg.jpg');
+            background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 0.8)), url('/images/welcome.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -331,9 +331,12 @@
 </head>
 <body>
     <!-- Preloader -->
-    <div id="preloader">
+<div id="preloader">
+    <div class="preloader-content">
+        <img src="./images/logo1.png" alt="Capital Education System Logo" class="preloader-logo">
         <div class="spinner"></div>
     </div>
+</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
@@ -410,7 +413,7 @@
                             <span class="month">Jun</span>
                             <span class="year">2023</span>
                         </div>
-                        <img src="../images/news/annual-day.jpg" class="card-img-top" alt="Annual Day Celebration">
+                        <img src="./images/gallery/annual-result-cover.jpg" class="card-img-top" alt="Annual Day Celebration">
                         <div class="card-body">
                             <h5 class="card-title">Annual Day Celebration</h5>
                             <p class="card-text">Our school celebrated its 28th Annual Day with great enthusiasm. Students showcased their talents through cultural performances, dances, and drama.</p>
@@ -433,7 +436,7 @@
                             <span class="month">Jun</span>
                             <span class="year">2023</span>
                         </div>
-                        <img src="../images/news/science-fair.jpg" class="card-img-top" alt="Science Fair">
+                        <img src="./images/gallery/prize.jpg" class="card-img-top" alt="Science Fair">
                         <div class="card-body">
                             <h5 class="card-title">Inter-School Science Fair Winners</h5>
                             <p class="card-text">Our students won 3 gold medals at the Rawalpindi Inter-School Science Fair. Their innovative projects impressed the judges and visitors alike.</p>
@@ -456,7 +459,7 @@
                             <span class="month">May</span>
                             <span class="year">2023</span>
                         </div>
-                        <img src="../images/news/new-building.jpg" class="card-img-top" alt="New Building Inauguration">
+                        <img src="./images/about/about1.jpg" class="card-img-top" alt="New Building Inauguration">
                         <div class="card-body">
                             <h5 class="card-title">New Girls Campus Building Inaugurated</h5>
                             <p class="card-text">The new wing of our Girls Campus was inaugurated by the District Education Officer. The building features modern classrooms and science labs.</p>
@@ -467,75 +470,6 @@
                         </div>
                         <div class="card-footer bg-transparent border-0">
                             <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newsModal3">Read More</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- News Item 4 -->
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card news-card h-100">
-                        <div class="news-date">
-                            <span class="day">18</span>
-                            <span class="month">May</span>
-                            <span class="year">2023</span>
-                        </div>
-                        <img src="../images/news/book-fair.jpg" class="card-img-top" alt="Book Fair">
-                        <div class="card-body">
-                            <h5 class="card-title">Annual Book Fair</h5>
-                            <p class="card-text">Our school hosted a three-day book fair with participation from leading publishers. Students and parents enjoyed special discounts on educational books.</p>
-                            <div class="news-meta">
-                                <span><i class="fas fa-calendar"></i> 18-20 May</span>
-                                <span><i class="fas fa-book"></i> 15 Publishers</span>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newsModal4">Read More</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- News Item 5 -->
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card news-card h-100">
-                        <div class="news-date">
-                            <span class="day">10</span>
-                            <span class="month">May</span>
-                            <span class="year">2023</span>
-                        </div>
-                        <img src="../images/news/sports.jpg" class="card-img-top" alt="Sports Champions">
-                        <div class="card-body">
-                            <h5 class="card-title">District Sports Champions</h5>
-                            <p class="card-text">Our school's basketball team won the district championship for the third consecutive year. The team will now represent Rawalpindi at the provincial level.</p>
-                            <div class="news-meta">
-                                <span><i class="fas fa-trophy"></i> 1st Position</span>
-                                <span><i class="fas fa-basketball-ball"></i> Basketball</span>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newsModal5">Read More</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- News Item 6 -->
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card news-card h-100">
-                        <div class="news-date">
-                            <span class="day">28</span>
-                            <span class="month">Apr</span>
-                            <span class="year">2023</span>
-                        </div>
-                        <img src="../images/news/teacher-award.jpg" class="card-img-top" alt="Teacher Award">
-                        <div class="card-body">
-                            <h5 class="card-title">Teacher Wins National Award</h5>
-                            <p class="card-text">Mrs. Ayesha Khan, our senior science teacher, received the National Excellence in Teaching Award for her innovative teaching methodologies.</p>
-                            <div class="news-meta">
-                                <span><i class="fas fa-award"></i> National Award</span>
-                                <span><i class="fas fa-user-graduate"></i> Science Department</span>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newsModal6">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -565,7 +499,7 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header p-0">
-                    <img src="../images/news/annual-day.jpg" class="modal-image" alt="Annual Day Celebration">
+                    <img src="./images/gallery/annual-result-cover.jpg" class="modal-image" alt="Annual Day Celebration">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -611,7 +545,7 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header p-0">
-                    <img src="../images/news/science-fair.jpg" class="modal-image" alt="Science Fair Winners">
+                    <img src="./images/gallery/prize.jpg" class="modal-image" alt="Science Fair Winners">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -654,7 +588,7 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header p-0">
-                    <img src="../images/news/new-building.jpg" class="modal-image" alt="New Building Inauguration">
+                    <img src="./images/about/about1.jpg" class="modal-image" alt="New Building Inauguration">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -686,139 +620,6 @@
                         
                         <h5 class="mt-4">Future Plans</h5>
                         <p>With this expansion, the Girls Campus can now accommodate 200 additional students. Admissions for the new session will begin next week.</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 4 -->
-    <div class="modal fade news-modal" id="newsModal4" tabindex="-1" aria-labelledby="newsModal4Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header p-0">
-                    <img src="../images/news/book-fair.jpg" class="modal-image" alt="Book Fair">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="news-date mb-3">
-                        <span class="day">18</span>
-                        <span class="month">May</span>
-                        <span class="year">2023</span>
-                    </div>
-                    <h3 class="modal-title mb-3" id="newsModal4Label">Annual Book Fair</h3>
-                    <div class="news-meta mb-4">
-                        <span><i class="fas fa-calendar"></i> 18-20 May</span>
-                        <span class="ms-3"><i class="fas fa-book"></i> 15 Publishers</span>
-                    </div>
-                    <div class="news-content">
-                        <p>Our school hosted a successful three-day book fair with participation from leading educational publishers across Pakistan. The event saw enthusiastic participation from students, parents, and teachers.</p>
-                        
-                        <h5 class="mt-4">Event Features</h5>
-                        <ul>
-                            <li>Special discounts (20-30%) on all books</li>
-                            <li>Meet-the-author sessions with renowned writers</li>
-                            <li>Reading corners with comfortable seating</li>
-                            <li>Book donation drive for underprivileged schools</li>
-                            <li>Workshops on developing reading habits</li>
-                        </ul>
-                        
-                        <h5 class="mt-4">Participating Publishers</h5>
-                        <p>The fair featured stalls from Oxford University Press, Paramount, Ferozsons, AFAQ, and other leading publishers covering textbooks, reference books, and general reading material.</p>
-                        
-                        <h5 class="mt-4">Student Involvement</h5>
-                        <p>Our student library committee managed a second-hand book exchange stall that was particularly popular. The fair concluded with a book reading competition with prizes for winners.</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 5 -->
-    <div class="modal fade news-modal" id="newsModal5" tabindex="-1" aria-labelledby="newsModal5Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header p-0">
-                    <img src="../images/news/sports.jpg" class="modal-image" alt="Sports Champions">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="news-date mb-3">
-                        <span class="day">10</span>
-                        <span class="month">May</span>
-                        <span class="year">2023</span>
-                    </div>
-                    <h3 class="modal-title mb-3" id="newsModal5Label">District Sports Champions</h3>
-                    <div class="news-meta mb-4">
-                        <span><i class="fas fa-trophy"></i> 1st Position</span>
-                        <span class="ms-3"><i class="fas fa-basketball-ball"></i> Basketball</span>
-                    </div>
-                    <div class="news-content">
-                        <p>Our school's basketball team created history by winning the Rawalpindi District Championship for the third consecutive year, defeating defending champions in a thrilling final match.</p>
-                        
-                        <h5 class="mt-4">Tournament Highlights</h5>
-                        <ul>
-                            <li>Team won all 5 matches in the tournament</li>
-                            <li>Final score: 68-62 in our favor</li>
-                            <li>Captain Usman Khan named MVP of the tournament</li>
-                            <li>Coach Mr. Tariq Javed awarded Best Coach</li>
-                        </ul>
-                        
-                        <h5 class="mt-4">Key Players</h5>
-                        <p>The team's success was led by captain Usman Khan (Grade 12), point guard Ali Raza (Grade 11), and power forward Bilal Ahmed (Grade 10). Their teamwork and strategy were praised by all observers.</p>
-                        
-                        <h5 class="mt-4">Next Challenge</h5>
-                        <p>The team will now represent Rawalpindi at the Punjab Inter-District Championship next month. Special training sessions have been arranged to prepare for the bigger challenge.</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 6 -->
-    <div class="modal fade news-modal" id="newsModal6" tabindex="-1" aria-labelledby="newsModal6Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header p-0">
-                    <img src="../images/news/teacher-award.jpg" class="modal-image" alt="Teacher Award">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="news-date mb-3">
-                        <span class="day">28</span>
-                        <span class="month">Apr</span>
-                        <span class="year">2023</span>
-                    </div>
-                    <h3 class="modal-title mb-3" id="newsModal6Label">Teacher Wins National Award</h3>
-                    <div class="news-meta mb-4">
-                        <span><i class="fas fa-award"></i> National Award</span>
-                        <span class="ms-3"><i class="fas fa-user-graduate"></i> Science Department</span>
-                    </div>
-                    <div class="news-content">
-                        <p>Mrs. Ayesha Khan, our senior science teacher with 15 years of experience, was honored with the prestigious National Excellence in Teaching Award at a ceremony in Islamabad.</p>
-                        
-                        <h5 class="mt-4">Award Criteria</h5>
-                        <p>The award recognizes teachers who demonstrate exceptional commitment to student learning, innovative teaching methods, and contributions to educational development. Mrs. Khan was selected from over 500 nominees nationwide.</p>
-                        
-                        <h5 class="mt-4">Teaching Innovations</h5>
-                        <ul>
-                            <li>Developed low-cost science experiments using everyday materials</li>
-                            <li>Pioneered the "Science in Daily Life" project-based learning approach</li>
-                            <li>Created YouTube channel with instructional videos for students</li>
-                            <li>Mentored 5 teachers who went on to win district-level awards</li>
-                        </ul>
-                        
-                        <h5 class="mt-4">School Celebration</h5>
-                        <p>The school organized a special assembly to honor Mrs. Khan's achievement. Students presented a tribute highlighting her impact on their learning journey. The principal announced a scholarship in her name for deserving science students.</p>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -888,58 +689,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Event 3 -->
-                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card event-card h-100">
-                        <div class="row g-0">
-                            <div class="col-md-4 event-date-col">
-                                <div class="event-date">
-                                    <span class="day">05</span>
-                                    <span class="month">Jul</span>
-                                    <span class="year">2023</span>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Quran Competition</h5>
-                                    <p class="card-text">Annual Quran recitation competition for students of all grades. Categories include Hifz, Nazra, and Tarteel.</p>
-                                    <div class="event-meta">
-                                        <span><i class="fas fa-clock"></i> 10:00 AM - 2:00 PM</span>
-                                        <span><i class="fas fa-map-marker-alt"></i> Girls Campus Auditorium</span>
-                                    </div>
-                                    <a href="#" class="btn btn-sm btn-primary mt-2">Add to Calendar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Event 4 -->
-                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="card event-card h-100">
-                        <div class="row g-0">
-                            <div class="col-md-4 event-date-col">
-                                <div class="event-date">
-                                    <span class="day">15</span>
-                                    <span class="month">Jul</span>
-                                    <span class="year">2023</span>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">New Session Orientation</h5>
-                                    <p class="card-text">Orientation program for new students and parents for the academic session 2023-24.</p>
-                                    <div class="event-meta">
-                                        <span><i class="fas fa-clock"></i> 9:30 AM - 12:30 PM</span>
-                                        <span><i class="fas fa-map-marker-alt"></i> Main Auditorium</span>
-                                    </div>
-                                    <a href="#" class="btn btn-sm btn-primary mt-2">Add to Calendar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             
             <div class="text-center mt-4">
@@ -970,74 +719,74 @@
     </section>
 
     <!-- Footer -->
-<!-- Footer -->
-<footer class="footer bg-dark text-white pt-5 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4">About Us</h5>
-                <p>Capital Education System is a premier educational institution in Qulzar e Quaid, Rawalpindi, providing quality education since 1995 through separate campuses for boys and girls.</p>
-                <div class="social-links mt-4">
-                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white me-2"><i class="fab fa-youtube"></i></a>
+    <footer class="footer bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">About Us</h5>
+                    <p>Capital Education System is a premier educational institution in Qulzar e Quaid, Rawalpindi, providing quality education since 1995 through separate campuses for boys and girls.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white">About Us</a></li>
+                        <li class="mb-2"><a href="branches/boys-campus.html" class="text-white">Boys Campus</a></li>
+                        <li class="mb-2"><a href="branches/girls-campus.html" class="text-white">Girls Campus</a></li>
+                        <li class="mb-2"><a href="admissions/process.html" class="text-white">Admissions</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Contact Info</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            <span>H4WJ+VG7, St 11, Gulzar e Quaid, Rawalpindi, Punjab 44000, Pakistan</span>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone-alt me-2"></i>
+                            <span>+92 51 5954157</span>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2"></i>
+                            <span>info@capitaleducation.edu.pk</span>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-clock me-2"></i>
+                            <span>Mon-Sat: 8:00 AM - 2:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase mb-4">Newsletter</h5>
+                    <p>Subscribe to our newsletter for the latest updates and news.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4">Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
-                    <li class="mb-2"><a href="about.html" class="text-white">About Us</a></li>
-                    <li class="mb-2"><a href="branches/boys-campus.html" class="text-white">Boys Campus</a></li>
-                    <li class="mb-2"><a href="branches/girls-campus.html" class="text-white">Girls Campus</a></li>
-                    <li class="mb-2"><a href="admissions/process.html" class="text-white">Admissions</a></li>
-                    <li class="mb-2"><a href="contact.html" class="text-white">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4">Contact Info</h5>
-                <ul class="list-unstyled contact-info">
-                    <li class="mb-3">
-                        <i class="fas fa-map-marker-alt me-2"></i>
-                        <span>H4WJ+VG7, St 11, Gulzar e Quaid, Rawalpindi, Punjab 44000, Pakistan</span>
-                    </li>
-                    <li class="mb-3">
-                        <i class="fas fa-phone-alt me-2"></i>
-                        <span>+92 51 5954157</span>
-                    </li>
-                    <li class="mb-3">
-                        <i class="fas fa-envelope me-2"></i>
-                        <span>info@capitaleducation.edu.pk</span>
-                    </li>
-                    <li class="mb-3">
-                        <i class="fas fa-clock me-2"></i>
-                        <span>Mon-Sat: 8:00 AM - 2:00 PM</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-uppercase mb-4">Newsletter</h5>
-                <p>Subscribe to our newsletter for the latest updates and news.</p>
-                <form class="newsletter-form">
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
-                        <button class="btn btn-primary" type="submit">Subscribe</button>
-                    </div>
-                </form>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Capital Education System. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Developed by <a href="http://raufokz.netlify.app/" class="text-white" target="_blank">Abdur Rauf</a></p>
+                </div>
             </div>
         </div>
-        <hr class="my-4">
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="mb-0">&copy; 2025 Capital Education System. All rights reserved.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <p class="mb-0">Developed by <a href="http://raufokz.netlify.app/" class="text-white" target="_blank">Abdur Rauf</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
+
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 

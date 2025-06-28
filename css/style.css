@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
-/* Preloader */
+/* Preloader Styles */
 #preloader {
     position: fixed;
     top: 0;
@@ -97,6 +97,20 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.preloader-logo {
+    width: 150px;
+    height: auto;
+    animation: pulse 2s infinite ease-in-out;
 }
 
 .spinner {
@@ -111,6 +125,12 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 /* Top Bar */
@@ -739,181 +759,284 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1);
     opacity: 1;
 }
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
-@media (max-width: 1200px) {
-  .carousel-caption {
-    padding: 2rem;
-  }
-  
-  .carousel-caption h1 {
-    font-size: 2.5rem;
-  }
+/* Media Queries for Responsive Design */
+@media (max-width: 1199.98px) {
+    /* Adjustments for large tablets */
+    .hero-section .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section .carousel-caption p {
+        font-size: 1.1rem;
+    }
 }
 
-@media (max-width: 992px) {
-  .hero-carousel-item {
-    min-height: 450px;
-  }
-  
-  .carousel-caption {
-    bottom: 12%;
-  }
-  
-  .carousel-caption h1 {
-    font-size: 2.2rem;
-  }
-  
-  .carousel-caption p {
-    font-size: 1.1rem;
-  }
+@media (max-width: 991.98px) {
+    /* Adjustments for tablets */
+    .navbar-collapse {
+        background: white;
+        padding: 20px;
+        margin-top: 15px;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+    
+    .hero-section .carousel-caption {
+        bottom: 10%;
+        padding: 1.5rem;
+    }
+    
+    .hero-section .carousel-caption h1 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-section .carousel-caption p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
+    }
 }
 
-@media (max-width: 768px) {
-  .hero-carousel-item {
-    min-height: 400px;
-  }
-  
-  .carousel-caption {
-    bottom: 10%;
-    padding: 1.5rem;
-    width: 95%;
-  }
-  
-  .carousel-caption h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .carousel-caption p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .carousel-caption .btn {
-    padding: 0.7rem 1.5rem;
-    font-size: 1rem;
-  }
-}
-/* ===== MOBILE-SPECIFIC CAROUSEL STYLES ===== */
 @media (max-width: 767.98px) {
-  .hero-section {
-    margin-bottom: 1rem;
-  }
-
-  /* ----- Carousel Structure ----- */
-  .hero-carousel-item {
-    min-height: 300px !important; /* More compact height for mobile */
-  }
-
-  /* ----- Caption Adjustments ----- */
-  .carousel-caption {
-    bottom: 5% !important;
-    left: 0;
-    transform: none;
-    width: 100%;
-    padding: 1rem 1.5rem !important;
-    background: rgba(0, 0, 0, 0.65); /* Solid background for better readability */
-    border-radius: 0;
-  }
-
-  /* ----- Text Sizing ----- */
-  .carousel-caption h1 {
-    font-size: 1.5rem !important;
-    line-height: 1.3;
-    margin-bottom: 0.75rem !important;
-  }
-
-  .carousel-caption p {
-    font-size: 0.9rem !important;
-    line-height: 1.4;
-    margin-bottom: 1rem !important;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limit to 2 lines max */
-    line-clamp: 2; /* Standard property for compatibility */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  /* ----- Buttons ----- */
-  .carousel-caption .btn {
-    padding: 0.6rem 1.25rem !important;
-    font-size: 0.9rem !important;
-    display: inline-block;
-    width: auto;
-    margin: 0 auto;
-  }
-
-  /* ----- Navigation Controls ----- */
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 15% !important; /* Larger touch targets */
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    width: 1.8rem !important;
-    height: 1.8rem !important;
-  }
-
-  /* ----- Indicators ----- */
-  .carousel-indicators {
-    margin-bottom: 0.5rem !important;
-  }
-
-  .carousel-indicators [data-bs-target] {
-    width: 8px !important;
-    height: 8px !important;
-    margin: 0 4px !important;
-  }
-
-  /* ----- Image Treatment ----- */
-  .hero-carousel-item::after {
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.1) 0%,
-      rgba(0, 0, 0, 0.5) 50%,
-      rgba(0, 0, 0, 0.8) 100%
-    );
-  }
+    /* Adjustments for small tablets and large phones */
+    .navbar-brand img {
+        height: 45px;
+    }
+    
+    .hero-section .carousel-item {
+        min-height: 400px;
+    }
+    
+    .hero-section .carousel-caption {
+        bottom: 5%;
+        width: 95%;
+    }
+    
+    .hero-section .carousel-caption h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-section .carousel-caption .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .about-section img {
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-title:after {
+        width: 60px;
+    }
+    
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .cta-section {
+        padding: 70px 0;
+        background-attachment: scroll;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-section p {
+        font-size: 1rem;
+    }
+    
+    .footer {
+        padding: 60px 0 20px;
+    }
+    
+    .footer .col-md-6, 
+    .footer .col-lg-3, 
+    .footer .col-lg-4 {
+        margin-bottom: 30px;
+    }
+    
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        bottom: 20px;
+        right: 20px;
+    }
 }
 
-/* ===== SMARTPHONE PORTRAIT OPTIMIZATION ===== */
 @media (max-width: 575.98px) {
-  .hero-carousel-item {
-    min-height: 250px !important;
-  }
-
-  .carousel-caption {
-    padding: 0.75rem 1rem !important;
-  }
-
-  .carousel-caption h1 {
-    font-size: 1.3rem !important;
-    margin-bottom: 0.5rem !important;
-  }
-
-  .carousel-caption p {
-    font-size: 0.8rem !important;
-    margin-bottom: 0.75rem !important;
-    -webkit-line-clamp: 2; /* Ensure max 2 lines */
-    line-clamp: 2; /* Standard property for compatibility */
-  }
-
-  .carousel-caption .btn {
-    padding: 0.5rem 1rem !important;
-    font-size: 0.85rem !important;
-  }
+    /* Adjustments for mobile phones */
+    body {
+        font-size: 14px;
+    }
+    
+    .navbar-brand img {
+        height: 40px;
+    }
+    
+    .hero-section .carousel-item {
+        min-height: 350px;
+    }
+    
+    .hero-section .carousel-caption {
+        padding: 1rem;
+    }
+    
+    .hero-section .carousel-caption h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .hero-section .carousel-caption p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        display: none; /* Hide paragraph on smallest devices */
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+        padding-bottom: 10px;
+    }
+    
+    .section-title:after {
+        height: 2px;
+    }
+    
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .feature-box h3 {
+        font-size: 18px;
+    }
+    
+    .testimonial-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .news-date {
+        top: 10px;
+        right: 10px;
+        padding: 8px;
+    }
+    
+    .news-date .day {
+        font-size: 20px;
+    }
+    
+    .news-date .month {
+        font-size: 12px;
+    }
+    
+    .cta-section {
+        padding: 50px 0;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-buttons .btn {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+    
+    .footer h5 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-info li span {
+        font-size: 13px;
+    }
+    
+    .newsletter-form .form-control {
+        height: 45px;
+    }
 }
 
-/* ===== TOUCH DEVICE ENHANCEMENTS ===== */
-@media (hover: none) and (pointer: coarse) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    opacity: 0.7 !important; /* Always show controls on touch devices */
-  }
-  
-  .carousel-indicators [data-bs-target] {
-    width: 10px !important;
-    height: 10px !important; /* Larger touch targets */
-  }
+/* Prevent horizontal scrolling on all devices */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure images don't exceed container width */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjust carousel indicators for small devices */
+@media (max-width: 767.98px) {
+    .carousel-indicators {
+        margin-bottom: 0.5rem;
+    }
+    
+    .carousel-indicators [data-bs-target] {
+        width: 8px;
+        height: 8px;
+        margin: 0 5px;
+    }
+}
+
+/* Fix dropdown menu on mobile */
+@media (max-width: 991.98px) {
+    .dropdown-menu {
+        box-shadow: none;
+        border: 1px solid rgba(0,0,0,0.1);
+        margin-top: 5px;
+    }
+    
+    .dropdown-item {
+        padding: 8px 15px;
+    }
+}
+
+/* Adjust modal for small devices */
+@media (max-width: 575.98px) {
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    .modal-content {
+        padding: 15px;
+    }
+    
+    .modal-body .row {
+        flex-direction: column;
+    }
+    
+    .modal-body .col-md-6 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
