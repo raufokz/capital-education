@@ -104,22 +104,49 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+}
+
+.logo-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
 }
 
 .preloader-logo {
-    width: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
     height: auto;
     animation: pulse 2s infinite ease-in-out;
+    z-index: 1;
 }
 
 .spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #f3f3f3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid transparent;
     border-top: 5px solid var(--secondary-color);
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: spin 2s linear infinite;
+    box-sizing: border-box;
+}
+
+/* Orbit effect for spinner */
+.spinner::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    transform: translateX(-50%);
 }
 
 @keyframes spin {
@@ -128,10 +155,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.9; }
-    100% { transform: scale(1); opacity: 1; }
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.9; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 }
+
 
 /* Top Bar */
 .top-bar {
@@ -809,6 +837,16 @@ h1, h2, h3, h4, h5, h6 {
         height: 60px;
         font-size: 25px;
     }
+        .logo-container {
+        width: 180px;
+        height: 180px;
+    }
+    .preloader-logo {
+        width: 90px;
+    }
+    .spinner {
+        border-width: 4px;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -881,6 +919,20 @@ h1, h2, h3, h4, h5, h6 {
         bottom: 20px;
         right: 20px;
     }
+        .logo-container {
+        width: 150px;
+        height: 150px;
+    }
+    .preloader-logo {
+        width: 80px;
+    }
+    .spinner {
+        border-width: 3px;
+    }
+    .spinner::before {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -888,7 +940,21 @@ h1, h2, h3, h4, h5, h6 {
     body {
         font-size: 14px;
     }
-    
+        .logo-container {
+        width: 120px;
+        height: 120px;
+    }
+    .preloader-logo {
+        width: 70px;
+    }
+    .spinner {
+        border-width: 2px;
+    }
+    .spinner::before {
+        width: 12px;
+        height: 12px;
+        top: -3px;
+    }
     .navbar-brand img {
         height: 40px;
     }
